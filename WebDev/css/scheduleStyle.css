@@ -82,5 +82,6 @@ il:hover
 .displayChooser {
     padding: 20px;
     color: #FFF6E8;
+    background-color: red;
     border-radius: 8px;
 }

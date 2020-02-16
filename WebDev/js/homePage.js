@@ -1,4 +1,4 @@
-classes = [];
+window.classes = [];
 
 var firebaseConfig = {
     apiKey: "AIzaSyBzzXn8XRQmgqVUXMO65NhLwkYNblD3fwk",
@@ -138,6 +138,7 @@ for(let i = 0; i < names200.length; i++) {
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names200[i];
+    twohundo = document.getElementById('200');
     twohundo.append(elem);
 }
 
