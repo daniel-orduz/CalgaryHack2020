@@ -4,7 +4,9 @@
     <title>
       PATHFINDER
     </title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="/css/javaScript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Tomorrow&display=swap" rel="stylesheet">
   </head>
   <body>
     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
@@ -28,36 +30,27 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
-      function writeData() {
-        firebase
-          .database()
-          .ref("User")
-          .set({
-            name: document.getElementById("UserField").value,
-            pw: document.getElementById("PwField").value
-          });
-      }
-
-      function fetchData() {
-        data = firebase.database().ref("/CLASSES");
-
-        data.on("value", function(snapshot) {
-          console.log(snapshot.val());
-        });
-      }
     </script>
-    <div class="LogoTest">
-      <h1>
-        PATHFINDER
-      </h1>
-      <p>
-        <input type="text" placeholder="username" id="UserField" />
-        <input type="text" placeholder="password" id="PwField" />
-        <button onclick="writeData()">Submit</button>
-      </p>
-      <p>
-        <button onclick="fetchData()">LOG DATABASE DATA</button>
-      </p>
+    <div class="createAcc">
+        <div id="button"><a href="createAcc.html">Create Account</a></div>
+    </div>
+    <div class="LogoText">
+        <div class="logo">
+            <br><br><br><br><br><br>
+            <h1>
+                PATHFINDER
+            </h1>
+            <div class="traceCircle">.</div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <form>
+                <label>E-mail:&nbsp&nbsp&nbsp&nbsp&nbsp</label><input name=email autocomplete=off>
+                <br>
+                <br>
+                <label>Password: </label><input type="password" name=password><br><br><br>
+                <input type="submit" value="Sign-In" style="float: center;">
+            </form>
+        </div>
+    </div>
     </div>
   </body>
 </html>
