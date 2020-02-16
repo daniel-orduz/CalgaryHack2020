@@ -9,7 +9,8 @@ var firebaseConfig = {
     messagingSenderId: "193596888881",
     appId: "1:193596888881:web:8ad91fd31133a48ec4c210",
     measurementId: "G-PR305S62G1"
-};
+  };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
@@ -136,37 +137,73 @@ let names700 = ["CPSC701",
     "CPSC785",
     "CPSC789"];
 
-let docFrag200 = document.createDocumentFragment();
-let og200 = document.getElementById("200");
-
 for(let i = 0; i < names200.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names200[i];
-    docFrag200.append(elem);
+    twohundo.append(elem);
 }
 
-og200.appendChild(docFrag200);
+for(let i = 0; i < names300.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names300[i];
+    threehundo = document.getElementById('300');
+    threehundo.append(elem);
+}
 
-// for(let i = 0; i < names300.length; i++) {
-//     let elem = document.createElement("hello");
-//     elem.type = "button";
-//     elem.className = "classes";
-//     elem.innerHTML = names300[i];
-//     docFrag.append(elem);
-//     console.log(elem.getAttributeNames());
-// }
-//
-// document.body.appendChild(docFrag);
+for(let i = 0; i < names400.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.innerHTML = names400[i];
+    fourhundo = document.getElementById('400');
+    fourhundo.append(elem);
+}
+
+for(let i = 0; i < names500.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names500[i];
+    fivehundo = document.getElementById('500');
+    fivehundo.append(elem);
+}
+
+for(let i = 0; i < names600.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names600[i];
+    sixhundo = document.getElementById('600');
+    sixhundo.append(elem);
+}
+
+for(let i = 0; i < names700.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names700[i];
+    sevenhundo = document.getElementById('700');
+    sevenhundo.append(elem);
+}
 
 btn = document.getElementsByClassName("classes");
 for ( let i = 0; i < btn.length; i++ ){
-    btn[i].addEventListener("click", killMe);
+    btn[i].addEventListener("click", addToTaken);
 }
 
-function killMe(){
-    classes.push(this.innerHTML);
+confirmbtn = document.getElementById("confirm-button");
+confirmbtn.addEventListener("click", compare);
+
+function compare(){
+    for(let i=0;i<classes.length;i++){
+        console.log("you're fucking stupid murtaza");
+    }
+}
+
+function addToTaken(){
     console.log(classes)
 }
 
@@ -180,12 +217,15 @@ function displayCourses(p1) {
     b = document.getElementsByClassName(p1);
     for(let i=0; i<b.length; i++) {
         if (b[i].style.display === "none") {
-            b[i].style.display = "block";
+            b[i].style.display = "grid";
+            b[i].style.gridTemplateColumns = "repeat(4, 200px)";
+            b[i].style.gridAutoRows = "minmax(50,250)";
+            b[i].style.gridRowGap = "10px";
+            b[i].style.gridColumnGap = "10px";
         } else {
             b[i].style.display = "none";
         }
 
         console.log(b[i].innerHTML)
     }
-    // .style.display="none";
 }

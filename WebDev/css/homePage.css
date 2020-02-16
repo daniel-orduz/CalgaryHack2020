@@ -47,6 +47,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .displayChooser {
@@ -65,6 +66,18 @@ h1 {
 }
 
 .dropdownClasses400 {
+    display: none;
+}
+
+.dropdownClasses500 {
+    display: none;
+}
+
+.dropdownClasses600 {
+    display: none;
+}
+
+.dropdownClasses700 {
     display: none;
 }
 
