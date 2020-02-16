@@ -37,20 +37,47 @@ h1 {
   color: #eb6d6d;
 }
 
-.class-holder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.class-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.classes {
-  padding: 20px;
-  background-color: #eb6d6d;
-  border-radius: 8px;
+.displayChooser {
+    padding: 20px;
+    background-color: black;
+    color: #EB6D6D;
+    border-radius: 8px;
 }
 
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.dropdownClasses200 {
+    display: none;
+}
+
+.dropdownClasses300 {
+    display: none;
+}
+
+.dropdownClasses400 {
+    display: none;
+}
+
+.dropdownClasses500 {
+    display: none;
+}
+
+.dropdownClasses600 {
+    display: none;
+}
+
+.dropdownClasses700 {
+    display: none;
+}
+
+.classes{
+    padding: 20px;
+    background-color: #EB6D6D;
+    border-radius: 8px;
 }
