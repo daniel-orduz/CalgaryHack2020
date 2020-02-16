@@ -70,3 +70,17 @@ il:hover
 {
     background: #FCA905;
 }
+
+.class-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.displayChooser {
+    padding: 20px;
+    color: #FFF6E8;
+    border-radius: 8px;
+}
