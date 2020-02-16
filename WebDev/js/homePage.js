@@ -138,7 +138,6 @@ for(let i = 0; i < names200.length; i++) {
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names200[i];
-    twohundo = document.getElementById('200');
     twohundo.append(elem);
 }
 
@@ -156,7 +155,6 @@ for(let i = 0; i < names300.length; i++) {
 for(let i = 0; i < names400.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
-    elem.className = "classes";
     elem.innerHTML = names400[i];
     fourhundo = document.getElementById('400');
     fourhundo.append(elem);
