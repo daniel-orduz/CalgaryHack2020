@@ -1,5 +1,9 @@
-classes = ["CPSC 231", "CPSC 233", "CPSC 217"]
-taken = ["CPSC 231", "CPSC 413"]
+from firebase_admin import db
+
+ref = db.reference('server/saving-data/fireblog/posts')
+print(ref.get())
+
+'''taken = ["CPSC 231", "CPSC 413"]
 
 for classTaken in taken:
     try:
@@ -7,4 +11,4 @@ for classTaken in taken:
     except:
         pass
     
-print(classes)
+print(classes)'''
