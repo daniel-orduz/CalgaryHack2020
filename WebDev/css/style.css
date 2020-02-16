@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.LogoText {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background-color: white;
+    /* font-size: 30px;
+    font-family: 'Montserrat', sans-serif; */
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    /* margin-top: -280px;
+    margin-left: -15px; */
+}
+h1 {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;  
+    
+}
+
+@keyframes rot {
+    from {
+        transform:  rotate(0deg)
+                    translate(-150px)
+                    rotate(0deg);
+    }
+    to {
+        transform:  rotate(360deg)
+                    translate(-150px) 
+                    rotate(-360deg);
+    }
+}
+
+.traceCircle {
+    position: absolute;
+    top: 21%;
+	left: 46%;
+	font-size: 100px;
+    animation: rot 5s infinite linear;
+    color: #EB6D6D;
+}

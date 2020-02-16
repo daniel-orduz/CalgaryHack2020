@@ -4,10 +4,11 @@
     <title>
       PATHFINDER
     </title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="/css/javaScript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Tomorrow&display=swap" rel="stylesheet">
   </head>
   <body>
-    !-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -30,10 +31,14 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
-    <div class="LogoTest">
-      <h1>
-        PATHFINDER
-      </h1>
+    <div class="LogoText">
+        <div class="logo">
+            <h1>
+                PATHFINDER
+            </h1>
+            <div class="traceCircle">.</div>
+        </div>
     </div>
+    <div id="circle"></div>
   </body>
 </html>
