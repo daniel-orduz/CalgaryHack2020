@@ -7,7 +7,8 @@
     <script src="/css/javaScript.js"></script>
   </head>
   <body>
-    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -36,6 +37,14 @@
             pw: document.getElementById("PwField").value
           });
       }
+
+      function fetchData() {
+        data = firebase.database().ref("/CLASSES");
+
+        data.on("value", function(snapshot) {
+          console.log(snapshot.val());
+        });
+      }
     </script>
     <div class="LogoTest">
       <h1>
@@ -45,6 +54,9 @@
         <input type="text" placeholder="username" id="UserField" />
         <input type="text" placeholder="password" id="PwField" />
         <button onclick="writeData()">Submit</button>
+      </p>
+      <p>
+        <button onclick="fetchData()">LOG DATABASE DATA</button>
       </p>
     </div>
   </body>
