@@ -136,26 +136,29 @@ let names700 = ["CPSC701",
     "CPSC785",
     "CPSC789"];
 
-let docFrag = document.createDocumentFragment();
+let docFrag200 = document.createDocumentFragment();
+let og200 = document.getElementById("200");
 
 for(let i = 0; i < names200.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names200[i];
-    docFrag.append(elem);
+    docFrag200.append(elem);
 }
 
-for(let i = 0; i < names300.length; i++) {
-    let elem = document.createElement("hello");
-    elem.type = "button";
-    elem.className = "classes";
-    elem.innerHTML = names300[i];
-    docFrag.append(elem);
-    console.log(elem.getAttributeNames());
-}
+og200.appendChild(docFrag200);
 
-document.body.appendChild(docFrag);
+// for(let i = 0; i < names300.length; i++) {
+//     let elem = document.createElement("hello");
+//     elem.type = "button";
+//     elem.className = "classes";
+//     elem.innerHTML = names300[i];
+//     docFrag.append(elem);
+//     console.log(elem.getAttributeNames());
+// }
+//
+// document.body.appendChild(docFrag);
 
 btn = document.getElementsByClassName("classes");
 for ( let i = 0; i < btn.length; i++ ){
