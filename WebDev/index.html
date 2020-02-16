@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      PATHFINDER
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/css/javaScript.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Tomorrow&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBzzXn8XRQmgqVUXMO65NhLwkYNblD3fwk",
+        authDomain: "calgaryhacks2020-9356d.firebaseapp.com",
+        databaseURL: "https://calgaryhacks2020-9356d.firebaseio.com",
+        projectId: "calgaryhacks2020-9356d",
+        storageBucket: "calgaryhacks2020-9356d.appspot.com",
+        messagingSenderId: "193596888881",
+        appId: "1:193596888881:web:8ad91fd31133a48ec4c210",
+        measurementId: "G-PR305S62G1"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <div class="LogoText">
+        <div class="logo">
+            <h1>
+                PATHFINDER
+            </h1>
+            <div class="traceCircle">.</div>
+        </div>
+    </div>
+    <div id="circle"></div>
+  </body>
+</html>
