@@ -13,23 +13,36 @@
 
 .logo {
     background-color: white;
-    /* font-size: 30px;
-    font-family: 'Montserrat', sans-serif; */
     height: 300px;
     width: 300px;
     border: 1px solid black;
     border-radius: 50%;
     position: absolute;
     top: 5%;
-    /* margin-top: -280px;
-    margin-left: -15px; */
+    left: 40%;
 }
 h1 {
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;  
-    
+    font-size: 55px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: lighter;
+    margin: 0 auto;
 }
-
+input {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+}
+label {
+    text-align:left;
+    width:100px;
+    display:block;
+        float:left;
+        clear:right;
+    font-size:18;
+    font-family: 'Montserrat', sans-serif; 
+}
 @keyframes rot {
     from {
         transform:  rotate(0deg)
@@ -51,3 +64,25 @@ h1 {
     animation: rot 5s infinite linear;
     color: #EB6D6D;
 }
+#button {
+    width: 7em;
+    border: 1px solid black;
+    background: white;
+    border-radius: 0px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px;
+}
+a:hover {
+    color: #EB6D6D;
+}
+/* .createAcc {
+    text-align: right;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif; 
+} */
