@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Tomorrow&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+    
 
     <script>
       // Your web app's Firebase configuration
@@ -29,16 +29,28 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+      
     </script>
+    <div class="createAcc">
+        <div id="button"><a href="createAcc.html">Create Account</a></div>
+    </div>
     <div class="LogoText">
         <div class="logo">
+            <br><br><br><br><br><br>
             <h1>
                 PATHFINDER
             </h1>
             <div class="traceCircle">.</div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <form>
+                <label>E-mail:&nbsp&nbsp&nbsp&nbsp&nbsp</label><input name=email autocomplete=off> 
+                <br>
+                <br>
+                <label>Password: </label><input type="password" name=password><br><br><br>
+                <input type="submit" value="Sign-In" style="float: center;">
+            </form>
         </div>
     </div>
-    <div id="circle"></div>
+    </div>
   </body>
 </html>
