@@ -2,13 +2,7 @@
     padding: 0;
     margin: 0;
 }
-.LogoText {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .logo {
     background-color: white;
     height: 100px;
@@ -46,4 +40,16 @@ h1 {
     font-size: 100px;
     animation: rot 5s infinite linear;
     color: #EB6D6D;
+}
+
+.class-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classes{
+    padding: 20px;
+    background-color: #EB6D6D;
+    border-radius: 8px;
 }
