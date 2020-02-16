@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="289ee698-1925-4364-acd1-8d6dab281daf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WebDev/js/comparisonJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDev/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebDev/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebDev/js/homePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebDev/js/homePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
