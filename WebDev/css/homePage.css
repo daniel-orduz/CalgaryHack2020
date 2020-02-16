@@ -44,8 +44,28 @@ h1 {
 
 .class-holder{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.displayChooser {
+    padding: 20px;
+    background-color: black;
+    color: #EB6D6D;
+    border-radius: 8px;
+}
+
+.dropdownClasses200 {
+    display: none;
+}
+
+.dropdownClasses300 {
+    display: none;
+}
+
+.dropdownClasses400 {
+    display: none;
 }
 
 .classes{
