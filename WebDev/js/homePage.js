@@ -15,11 +15,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-ref = firebase.database().ref('/CLASSES');
-ref.on('value', (snapshot) => {
-    console.log(snapshot.val()['CPSC231'])
-});
-
 let names200 = ["CPSC203",
     "CPSC217",
     "CPSC219",
@@ -137,6 +132,7 @@ let names700 = ["CPSC701",
     "CPSC785",
     "CPSC789"];
 
+// Render all 200 level classes
 for(let i = 0; i < names200.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
@@ -145,6 +141,7 @@ for(let i = 0; i < names200.length; i++) {
     twohundo.append(elem);
 }
 
+// Render all 300 level classes
 for(let i = 0; i < names300.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
@@ -154,6 +151,7 @@ for(let i = 0; i < names300.length; i++) {
     threehundo.append(elem);
 }
 
+// You get the idea
 for(let i = 0; i < names400.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
@@ -189,6 +187,7 @@ for(let i = 0; i < names700.length; i++) {
     sevenhundo.append(elem);
 }
 
+// Adding listener to all class buttons
 btn = document.getElementsByClassName("classes");
 for ( let i = 0; i < btn.length; i++ ){
     btn[i].addEventListener("click", addToTaken);
@@ -197,22 +196,36 @@ for ( let i = 0; i < btn.length; i++ ){
 confirmbtn = document.getElementById("confirm-button");
 confirmbtn.addEventListener("click", compare);
 
+// On pressing 'submit' button returns the firebase entries for every class that was clicked
 function compare(){
-    for(let i=0;i<classes.length;i++){
-        console.log("you're fucking stupid murtaza");
-    }
+    ref = firebase.database().ref('/CLASSES');
+    ref.on('value', (snapshot) => {
+        for(let i=0;i<classes.length;i++){
+            console.log(snapshot.val()[classes[i]])
+        }
+});
 }
 
+// Adds clicked class to an array of "taken" classes. 
 function addToTaken(){
+    classes.push(this.innerHTML);
+    this.style.backgroundColor = "black";
+    this.style.color = "#EB6D6D";
     console.log(classes)
 }
 
-
-a = document.getElementsByClassName("displayChooser");
-for(let i=0;i<a.length;i++) {
-    a[i].addEventListener("click", displayCourses)
+// Toggling
+toggleButtons = document.getElementsByClassName("displayChooser");
+for(let i=0;i<toggleButtons.length;i++) {
+    toggleButtons[i].addEventListener("click", displayCourses)
 }
 
+classbuttons = document.getElementsByClassName("classes");
+for(let i=0;i<classbuttons.length;i++){
+    classbuttons[i].addEventListener("click", addToTaken);
+}
+
+// Showing classes in a way that isn't disgusting (once you click on 500 level classes, etc)
 function displayCourses(p1) {
     b = document.getElementsByClassName(p1);
     for(let i=0; i<b.length; i++) {
@@ -226,6 +239,5 @@ function displayCourses(p1) {
             b[i].style.display = "none";
         }
 
-        console.log(b[i].innerHTML)
     }
 }
