@@ -44,19 +44,45 @@ h1 {
 
 .class-holder{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.displayChooser {
+    padding: 20px;
+    background-color: black;
+    color: #EB6D6D;
+    border-radius: 8px;
+}
+
+.dropdownClasses200 {
+    display: none;
+}
+
+.dropdownClasses300 {
+    display: none;
+}
+
+.dropdownClasses400 {
+    display: none;
+}
+
+.dropdownClasses500 {
+    display: none;
+}
+
+.dropdownClasses600 {
+    display: none;
+}
+
+.dropdownClasses700 {
+    display: none;
 }
 
 .classes{
     padding: 20px;
     background-color: #EB6D6D;
     border-radius: 8px;
-}
-
-#confirm-button{
-    padding: 30px;
-    font-size: 20px;
-    background-color: #EB6D6D;
 }
