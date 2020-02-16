@@ -137,14 +137,13 @@ let names700 = ["CPSC701",
     "CPSC785",
     "CPSC789"];
 
-let docFrag = document.createDocumentFragment();
-
 for(let i = 0; i < names200.length; i++) {
     let elem = document.createElement("hello");
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names200[i];
-    docFrag.append(elem);
+    twohundo = document.getElementById('200');
+    twohundo.append(elem);
 }
 
 for(let i = 0; i < names300.length; i++) {
@@ -152,15 +151,49 @@ for(let i = 0; i < names300.length; i++) {
     elem.type = "button";
     elem.className = "classes";
     elem.innerHTML = names300[i];
-    docFrag.append(elem);
-    console.log(elem.getAttributeNames());
+    threehundo = document.getElementById('300');
+    threehundo.append(elem);
 }
 
-document.body.appendChild(docFrag);
+for(let i = 0; i < names400.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names400[i];
+    fourhundo = document.getElementById('400');
+    fourhundo.append(elem);
+}
+
+for(let i = 0; i < names500.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names500[i];
+    fivehundo = document.getElementById('500');
+    fivehundo.append(elem);
+}
+
+for(let i = 0; i < names600.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names600[i];
+    sixhundo = document.getElementById('600');
+    sixhundo.append(elem);
+}
+
+for(let i = 0; i < names700.length; i++) {
+    let elem = document.createElement("hello");
+    elem.type = "button";
+    elem.className = "classes";
+    elem.innerHTML = names700[i];
+    sevenhundo = document.getElementById('700');
+    sevenhundo.append(elem);
+}
 
 btn = document.getElementsByClassName("classes");
 for ( let i = 0; i < btn.length; i++ ){
-    btn[i].addEventListener("click", killMe);
+    btn[i].addEventListener("click", addToTaken);
 }
 
 confirmbtn = document.getElementById("confirm-button");
@@ -172,7 +205,7 @@ function compare(){
     }
 }
 
-function killMe(){
+function addToTaken(){
     classes.push(this.innerHTML);
     console.log(classes)
 }
@@ -187,12 +220,15 @@ function displayCourses(p1) {
     b = document.getElementsByClassName(p1);
     for(let i=0; i<b.length; i++) {
         if (b[i].style.display === "none") {
-            b[i].style.display = "block";
+            b[i].style.display = "grid";
+            b[i].style.gridTemplateColumns = "repeat(4, 200px)";
+            b[i].style.gridAutoRows = "minmax(50,250)";
+            b[i].style.gridRowGap = "10px";
+            b[i].style.gridColumnGap = "10px";
         } else {
             b[i].style.display = "none";
         }
 
         console.log(b[i].innerHTML)
     }
-    // .style.display="none";
 }
